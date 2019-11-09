@@ -20,3 +20,51 @@
 .App-link {
   color: #09d3ac;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+.mainNewArrivalsStyle {
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  font-size: 40px;
+}
+
+.main_Contents_area {
+  margin-top: 70px;
+}
+
+.margin1 {
+  margin-top: 50px;
+}
+
+.middleMargin {
+  margin-top: 150px;
+}
+
+.screen {
+  width: 100%;
+  height: 2700px;
+  position: relative;
+  /*overflow-x: hidden;*/
+  background-color: #fff;
+}
+
+.inner_align {
+  margin: 0 auto;
+  display: block;
+  width: 1200px;
+}

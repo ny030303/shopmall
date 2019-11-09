@@ -1,0 +1,26 @@
+
+.clothesCard1Image {
+     /*background-image: url("https://guesskorea.com/SE2/upload/1571790631-62.jpg");*/
+    width: 278px;
+    height: 364px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/*.clothesCard1Image:hover {*/
+/*    background-image: url("http://image.guesskorea.com/images/YJ/YJ4W5872/YJ4W5872_O.jpg");*/
+/*}*/
+
+.clothesCard1 {
+    width: 278px;
+    height: 470px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.title {
+    height: 36px;
+    overflow: hidden;
+    color: #555;
+    line-height: 18px;
+    word-break: keep-all;
+}

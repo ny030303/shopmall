@@ -1,0 +1,35 @@
+.mainFooterWrap {
+    padding: 40px 0 65px;
+    background: #222;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.boxCenter {
+    display: block;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.copyright {
+    margin-top: 28px;
+    color: #888;
+    font-size: 11px;
+}
+
+.footerTextBox p {
+    color: #888;
+    margin: 0;
+    font-size: 13px;
+}
+
+.ft_menu {
+    display: flex;
+}
+
+.ft_menu li {
+    margin-right: 25px;
+    font-size: 13px;
+    color: #fff;
+}

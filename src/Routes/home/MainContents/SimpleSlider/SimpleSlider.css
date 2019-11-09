@@ -1,0 +1,74 @@
+
+.testcolor {
+    background: #fff;
+    color: #3498db;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+}
+
+.divstyle {
+    width: 140px;
+    border:1px solid #000000;
+}
+.slick-prev {
+    /*background: #2b2b2b;*/
+    background-image: url("/img/btn_new_larr.png");
+    background-repeat: no-repeat;
+    border-radius: 0;
+    background-size: contain;
+    width: 15px;
+    height: 30px;
+    transition: .4s;
+    content: "";
+}
+.slick-prev:hover,.slick-prev:focus {
+    content: "";
+    background: none;
+    background-image: url("/img/btn_new_larr.png");
+    background-repeat: no-repeat;
+    border-radius: 0;
+    background-size: contain;
+}
+.slick-next:hover, .slick-next:focus {
+    content: "";
+    background: none;
+    background-image: url("/img/btn_new_rarr.png");
+    background-repeat: no-repeat;
+    border-radius: 0;
+    background-size: contain;
+}
+
+
+.slick-next {
+    background-image: url("/img/btn_new_rarr.png");
+    background-repeat: no-repeat;
+    border-radius: 0;
+    background-size: contain;
+    width: 16px;
+    height: 30px;
+    transition: .4s;
+    content: "";
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: none;
+    content: "";
+}
+
+
+/*div[aria-hidden="false"]:nth-child(4n+1) {*/
+/*    width: 341px;*/
+/*    height: 449px;*/
+/*}*/
+
+/*.slick-active:nth-last-child(4n-1) > div > div > div > div.clothesCard1Image {*/
+/*    width: 341px;*/
+/*    height: 449px;*/
+/*}*/
+

@@ -1,0 +1,27 @@
+
+
+.mainVideoBox {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.mainVideoImg {
+    width: 100%;
+    height: 400px;
+    /* position: fixed; */
+    /* top: 0; */
+    background-image: url("/img/videoPeople4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainVideoTextImg {
+    width: 100%;
+    height: 400px;
+     position: absolute;
+     top: 0;
+    background-image: url("/img/mainVideoText.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

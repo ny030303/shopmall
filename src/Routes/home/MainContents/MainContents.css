@@ -1,0 +1,95 @@
+.mainScreen {
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-image: url("img/Background.png");*/
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+    /*overflow-x: hidden;*/
+}
+
+.mainWrap {
+    /* width: 80vw; */
+    height: 100vh;
+    /* margin: 0 auto; */
+    left: 50%;
+    transform: translate(-50%);
+    /* display: flex; */
+    position: fixed;
+}
+
+.mainNav {
+    width: 100px;
+    height: 4px;
+    position: absolute;
+    bottom: 50px;
+    left: 25%;
+    transform: translate(-50%);
+    /*background-color: #2b2b2b;*/
+}
+
+.mainNavItemWrap {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+}
+
+.mainNavItem {
+    height: 5px;
+    width: 35px;
+    background-color: #fff;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.mainNavItemPoint {
+    background-color: #2b2b2b !important;
+}
+/*-----scrollBtn-------*/
+.scrollBtn {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -9%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.scrollBtn:hover {
+    background-color: #fff;
+}
+
+.scrollPadding {
+    text-align: center;
+    font-weight: bold;
+}
+
+#scrollMouse {
+    margin: 16px 0 0 0;
+    animation: upDown infinite linear 1s;
+    animation-direction: alternate;
+    font-size: 35px;
+}
+
+@keyframes upDown {
+    0% {
+        transform:translate(0, 0);
+    }
+    100% {
+        transform: translate(0, -23%);
+    }
+}
+
+/*--------------*/
+/*======MainVideoBox ==========*/
+
+.holdMainSmallCard {
+    margin: 0 auto;
+    display: block;
+    width: 1300px;
+}

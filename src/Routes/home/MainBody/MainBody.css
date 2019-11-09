@@ -1,0 +1,56 @@
+#colorBtn {
+    margin: 500px;
+    padding: 25px;
+}
+
+.mainScreen {
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-image: url("img/Background.png");*/
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+}
+
+.test {
+    top: 50%;
+    /* z-index: 1; */
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-right: 66px solid rgba(255,255,255,.7);
+    border-top: 43px solid transparent;
+    border-bottom: 43px solid transparent;
+    cursor: pointer;
+    outline: 0;
+}
+.main-front-slick-prev {
+    left: 30px;
+    background: url("/img/btn_visual_larr.png") no-repeat 36px 50%;
+}
+
+.main-front-slick-arrow {
+    top: 50%;
+    /* z-index: 1; */
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-left: 66px solid rgba(255,255,255,.7);
+    border-top: 43px solid transparent;
+    border-bottom: 43px solid transparent;
+    cursor: pointer;
+    outline: 0;
+}
+
+.main-front-slick-next {
+    right: 30px;
+    background: url("/img/btn_visual_rarr.png") no-repeat 36px 50%;
+}

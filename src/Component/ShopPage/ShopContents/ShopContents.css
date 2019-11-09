@@ -1,0 +1,15 @@
+
+.shopBestText {
+    display: block;
+    margin: 0 auto;
+    font-size: 23px;
+    width: 147px;
+}
+
+.shopBestLineBar {
+    display: block;
+    margin: 10px auto;
+    width: 44px;
+    height: 3px;
+    background: #000;
+}
