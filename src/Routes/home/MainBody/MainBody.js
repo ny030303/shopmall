@@ -12,13 +12,13 @@ class MainBody extends React.Component {
                     </ul>
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img src="/img/이미지4.jpg"  className="mainScreen" alt="Los Angeles"/>
+                            <img src="/img/img4.jpg"  className="mainScreen" alt="Los Angeles"/>
                         </div>
                         <div className="carousel-item">
-                            <img src="/img/이미지3.jpg" className="mainScreen" alt="Chicago"/>
+                            <img src="/img/img3.jpg" className="mainScreen" alt="Chicago"/>
                         </div>
                         <div className="carousel-item">
-                            <img src="/img/이미지5.jpg" className="mainScreen" alt="New York"/>
+                            <img src="/img/img5.jpg" className="mainScreen" alt="New York"/>
                         </div>
                     </div>
                     <a className="carousel-control-prev" href="#demo" data-slide="prev">

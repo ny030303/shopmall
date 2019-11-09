@@ -1,9 +1,9 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
-import {getUsers} from "../../../services/DataService";
+import {getUsers} from "../../services/DataService";
 
 import "./LoginForm.css"
-import alertDialog from "../../../services/AlertDialog";
+import alertDialog from "../../services/AlertDialog";
 
 class LoginForm extends React.Component {
   constructor(props) {
