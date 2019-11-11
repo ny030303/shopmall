@@ -27,22 +27,3 @@
     color: #bbb;
     margin: 0 30px 30px 30px;
 }
-
-.smallTriangle {
-    position: absolute;
-    top: 25px;
-    right: -50px;
-    display: block;
-    width: 0;
-    height: 0;
-    border: 7px solid transparent;
-    border-top: 7px solid #fff;
-    content: "";
-    /*transition: all .3s;*/
-    -webkit-transition: all .3s;
-}
-
-.smallTriangle:hover {
-    transform: rotate(180deg);
-    top: 15px;
-}

@@ -1,0 +1,40 @@
+.otherShopPageTitle {
+    color: black;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 156px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.otherShopPageSubMenu {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.otherShopPageSubMenu li {
+    flex: 1;
+}
+.otherShopPageSubMenu li button {
+    width: 100%;
+    border-radius: 0;
+    font-size: 14px;
+    height: 45px;
+    border: 1px solid #d3d3d3;
+    border-width: 1px 0.5px 1px 0.5px;
+    background-color: rgba(0,0,0,0);
+    outline: none;
+}
+
+.btnActive {
+    background-color: black !important;
+    color: #fff;
+}
+
+.subMenuTitle {
+    display: inline-block;
+    font-size: 25px;
+    padding: 0 15px 0 0;
+    font-family: 'Roboto', sans-serif;
+}

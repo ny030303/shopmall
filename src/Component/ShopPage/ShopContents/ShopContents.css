@@ -4,12 +4,77 @@
     margin: 0 auto;
     font-size: 23px;
     width: 147px;
+    text-align: center;
 }
 
+/*=====선=======*/
 .shopBestLineBar {
     display: block;
     margin: 10px auto;
     width: 44px;
     height: 3px;
     background: #000;
+}
+/*==============*/
+
+
+.clothesProductsHead {
+    position: relative;
+    margin-top: 100px;
+    min-height: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #555;
+}
+
+.clotProHeadTitle {
+    text-align: center;
+    font-weight: bold;
+}
+
+/*==========조회 버튼 부분============*/
+.clothesLookUp {
+    background-color: rgba(0,0,0,0);
+    color: #555;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: -22px;
+}
+
+.clothesLookUp:hover, .clothesLookUp:before {
+    background-color: rgba(0,0,0,0);
+    color: #555;
+}
+
+.blackTriangle {
+    border-top: 7px solid rgb(0, 0, 0);
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    content: "";
+     transition: all .3s;
+}
+/*==================================*/
+
+/*=========필터 버튼 부분============*/
+
+
+
+/*-----필터 내부-----*/
+.filterWrap {
+    padding: 30px 0 30px;
+    background: rgba(255,255,255,.98);
+    visibility: hidden;
+    position: absolute;
+}
+.filterCheck {
+    display: table;
+    width: 100%;
+    border-top: 1px solid #e6e6e6;
 }
