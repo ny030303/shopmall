@@ -23,7 +23,7 @@ export const HeaderNav2 = ({name, link, menus}) => (
       <div className="row">
         {
           Object.keys(menus).map((key, i) => (
-            <div className="col">
+            <div key={i} className="col">
               <span>{key}</span>
               <ul style={{marginTop: "10px"}}>
                 {menus[key].map((v, i) => (<li key={i}><a href={v.link}>{v.name}</a></li>))}

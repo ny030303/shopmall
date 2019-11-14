@@ -2,7 +2,7 @@ import React from "react";
 import OtherShopPage from "../../Component/OtherShopPage/OtherShopPage";
 import MainFooter from "../../MainFooter/MainFooter";
 import eventService from "../../services/EventService";
-import {DBItemDataToItems, getSaleItemsItems} from "../../services/DataService";
+import {DBItemDataToItems, getSaleItems} from "../../services/DataService";
 
 
 export class Sale extends React.Component {
@@ -35,7 +35,7 @@ export class Sale extends React.Component {
     }
     if (menuIdx !== null) {
       current.menuIdx = menuIdx;
-      getSaleItemsItems(shopInfo.subMenu[Number(current.subMenuIdx)].name.toLowerCase(), current.menuIdx + 1, res => {
+      getSaleItems(shopInfo.subMenu[Number(current.subMenuIdx)].name.toLowerCase(), current.menuIdx + 1, res => {
         let saleItems = [];
         res.data.forEach(item => saleItems.push(DBItemDataToItems(item)));
         this.setState({denimItems: saleItems});

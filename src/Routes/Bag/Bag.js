@@ -50,7 +50,6 @@ export class Bag extends React.Component {
       });
     }
     this.setState(current);
-
   };
 
   render() {
