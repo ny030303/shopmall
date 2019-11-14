@@ -1,7 +1,7 @@
 .mainFooterWrap {
     padding: 40px 0 65px;
     background: #222;
-    position: absolute;
+    /*position: absolute;*/
     bottom: 0;
     width: 100%;
 }

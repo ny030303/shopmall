@@ -3,6 +3,7 @@ import waitDialog from "./WaitDialog";
 
 const config = {headers: {'Content-Type': 'application/json;charset=UTF-8'}};
 
+
 export const DBItemDataToItems = (item) => {
   let colorPicks = [];
   item.colors.split(',').forEach(v => colorPicks.push({title: 'NONE', color: `#${v}`}));

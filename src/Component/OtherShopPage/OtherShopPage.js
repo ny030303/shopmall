@@ -191,8 +191,6 @@ class OtherShopPage extends React.Component {
             this.state.sliderDatas.map((v, i) => (<ClothesCard3 key={i} cloths={v} />))
           }
         </div>
-
-        <MainFooter/>
       </div>
     );
   }

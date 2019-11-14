@@ -121,7 +121,6 @@ class ShopContents extends React.Component {
             this.props.normalItems.map((v, i) => (<ClothesCard3 key={i} cloths={v} />))
           }
         </div>
-        <MainFooter/>
       </div>
     );
   }

@@ -13,6 +13,7 @@
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
     transition: .3s;
+    top: 0;
 }
 
 .isMainHead {

@@ -1,12 +1,16 @@
 import React from "react";
+import { withRouter } from 'react-router-dom';
 import "./ClothesCard3.css";
 
 class ClothesCard3 extends React.Component {
+    gotoDetailClothes = () => {
+        console.log(this.props);
+        this.props.history.push("/detailClothes/" + btoa(this.props.location.pathname));
+    };
     render() {
         const {cloths} = this.props;
-
         return (
-            <div className="clothesCard3" >
+            <div className="clothesCard3" onClick={this.gotoDetailClothes}>
                 <div className="clothesCard3ImageWrap">
                     <div className="clothesCard3Image" style={{backgroundImage: "url("+cloths.image+")"}}/>
                     <div className="size-box">
@@ -28,13 +32,8 @@ class ClothesCard3 extends React.Component {
                     </div>
                 </div>
             </div>
-
-
-
-
-
         );
     }
 }
 
-export default ClothesCard3;
+export default withRouter(ClothesCard3);
