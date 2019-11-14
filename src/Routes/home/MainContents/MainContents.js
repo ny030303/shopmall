@@ -53,7 +53,6 @@ class MainContents extends React.Component {
               <div className="middleMargin"/>
               <MainVideoBox/>
               <div className="middleMargin"/>
-              <MainFooter/>
             </div>
           </div>
         </div>

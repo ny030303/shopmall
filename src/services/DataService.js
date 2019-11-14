@@ -1,5 +1,4 @@
 import axios from "axios";
-import waitDialog from "./WaitDialog";
 
 const config = {headers: {'Content-Type': 'application/json;charset=UTF-8'}};
 
@@ -65,4 +64,4 @@ export const getSaleItemsItems = (gender, type, callback) => {
     console.log('getSaleItemsItems:', res.data);
     if (callback) callback(res.data);
   });
-}
+};

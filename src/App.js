@@ -1,6 +1,5 @@
 import React from 'react';
 import {HashRouter, Redirect, Route, Switch} from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import MainTitle from "./MainTitle/MainTitle";
 import MainContents from "./Routes/home/MainContents/MainContents";
@@ -12,6 +11,9 @@ import {Denim} from "./Routes/Denim/Denim";
 import {Bag} from "./Routes/Bag/Bag";
 import {Sale} from "./Routes/Sale/Sale";
 import {EventContents} from "./Routes/EventContents/EventContents";
+import MainFooter from "./MainFooter/MainFooter";
+import DetailClothesContents from "./Component/DetailClothesContents/DetailClothesContents";
+
 
 const PrivateRoute = ({component: Component, authed, ...rest}) => (
     <Route
@@ -42,6 +44,7 @@ class App extends React.Component {
 
     render() {
         return (
+            <div style={{height:"100%",position:"relative"}}>
             <HashRouter>
                 <MainTitle/>
                 <MainHelper/>
@@ -55,8 +58,11 @@ class App extends React.Component {
                     <Route path="/Event/:subMenu" component={EventContents}/>
                     <PrivateRoute authed={this.state.authed} path="/user" component={LoginForm}/>
                     <Route path="/login" component={(props) => <LoginForm {...props} authed={this.state.authed}/>}/>
+                    <Route path="/detailClothes/:data" component={DetailClothesContents}/>
                 </Switch>
+                <MainFooter/>
             </HashRouter>
+            </div>
         );
     }
 }
