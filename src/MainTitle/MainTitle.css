@@ -90,6 +90,7 @@
     transition: .3s;
     font-size: 14px;
     color: #ccc;
+    z-index: 2;
 }
 .headerSubMenu > ul li {
     margin: 10px 0;

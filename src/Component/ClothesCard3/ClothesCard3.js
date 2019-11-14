@@ -1,16 +1,16 @@
 import React from "react";
-import "./ClothesCard2.css";
+import "./ClothesCard3.css";
 
-class ClothesCard2 extends React.Component {
+class ClothesCard3 extends React.Component {
     render() {
         const {cloths} = this.props;
 
         return (
-            <div className="clothesCard2" >
-                <div className="clothesCard2ImageWrap">
-                    <div className="clothesCard2Image" style={{backgroundImage: "url("+cloths.image+")"}}/>
+            <div className="clothesCard3" >
+                <div className="clothesCard3ImageWrap">
+                    <div className="clothesCard3Image" style={{backgroundImage: "url("+cloths.image+")"}}/>
                     <div className="size-box">
-                        <i className="far fa-heart"></i>
+                        <i className="far fa-heart"/>
                         <div className="clotCard2HeartText">{cloths.heartCnt}</div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@ class ClothesCard2 extends React.Component {
                     </div>
                     <div className="color-chip">
                         {
-                            cloths.colorPick.map((v,i) => (<div style={{backgroundColor: v.color}} className="color-circle" key={i} title={v.title}/>))
+                            cloths.colorPick.map((v,i) => (<div style={{backgroundColor: v.color}} className="middle-color-circle" key={i} title={v.title}/>))
                         }
                     </div>
                 </div>
@@ -37,4 +37,4 @@ class ClothesCard2 extends React.Component {
     }
 }
 
-export default ClothesCard2;
+export default ClothesCard3;

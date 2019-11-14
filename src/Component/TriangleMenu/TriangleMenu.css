@@ -1,0 +1,23 @@
+
+.triangleMenuWrap {
+    /*position: absolute;*/
+    /*top: -4px;*/
+    /*right: -50px;*/
+    display: inline-block;
+}
+
+.smallTriangle {
+    display: inline-block;
+    transition: all .3s;
+    font-size: 25px;
+}
+
+.triangleMenuWrap:hover > .smallTriangle {
+    transform: rotate(180deg);
+    top: 15px;
+}
+
+.triangleMenuWrap:hover > .headerSubMenu {
+    visibility: visible;
+    opacity: 1;
+}

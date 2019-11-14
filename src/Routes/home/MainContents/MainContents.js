@@ -5,8 +5,17 @@ import MainSmallCard from "./MainSmallCard/MainSmallCard";
 import MainVideoBox from "./MainVideoBox/MainVideoBox";
 import MainBody from "../MainBody/MainBody";
 import MainFooter from "../../../MainFooter/MainFooter";
+import eventService from "../../../services/EventService";
 
 class MainContents extends React.Component {
+  componentDidMount() {
+    eventService.emitEvent('onMainContents', true);
+  }
+
+  componentWillUnmount() {
+    eventService.emitEvent('onMainContents', false);
+  }
+
   render() {
     return (
       <div>
