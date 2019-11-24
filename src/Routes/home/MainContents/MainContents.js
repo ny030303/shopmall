@@ -16,6 +16,19 @@ class MainContents extends React.Component {
     eventService.emitEvent('onMainContents', false);
   }
 
+  state = {
+    datas: [
+      {
+        imgSrc: "/img/mainSmallCardImg1.jpg",
+        text: "오직 온라인에서만 만날 수 있는 상품들"
+      },
+      {
+        imgSrc: "/img/mainSmallCardImg2.jpg",
+        text: "GUESS HANDBAG & CASUAL BAG"
+      }
+    ]
+  }
+
   render() {
     return (
       <div>
@@ -47,8 +60,9 @@ class MainContents extends React.Component {
               <img style={{width: "100%"}} src="/img/longImg.jpg"/>
               <div className="margin1"/>
               <div className="holdMainSmallCard">
-                <MainSmallCard/>
-                <MainSmallCard/>
+                {
+                  this.state.datas.map((v, i) => (<MainSmallCard key={i} datas={v}/>))
+                }
               </div>
               <div className="middleMargin"/>
               <MainVideoBox/>

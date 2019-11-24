@@ -1,0 +1,16 @@
+.ShoppingBagTable > table > tbody > tr > td {
+    font-size: 13px;
+    padding: 9px 1px;
+    text-align: center;
+}
+
+.ShoppingBagTable > table > tbody > tr > td > ul {
+    padding: 0;
+}
+
+.ShoppingBagTable > table > tbody > tr > td:nth-child(2) { width: 100px; }
+.ShoppingBagTable > table > tbody > tr > td:nth-child(3) { width: 60px; }
+
+.ShoppingBagTable > table > tbody > tr > td:nth-child(4) { width: 80px; }
+
+.ShoppingBagTable > table > thead > tr > th:nth-child(5) { width: 97px; }

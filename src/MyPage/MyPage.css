@@ -1,0 +1,30 @@
+.MyPage {
+    font-family: 'Roboto', sans-serif;
+}
+
+.status_list {
+    margin: 14px 0 0 232px;
+    width: 220px;
+    border-left: 1px solid #969696;
+    text-align: center;
+    height: 70px;
+}
+
+.status_list .tit {
+    color: #555;
+    font-size: 13px;
+    margin: 0;
+}
+
+.status_list .count {
+    display: block;
+    margin-top: 10px;
+    font-size: 34px;
+}
+
+.myPageSubTitle {
+    margin-left: 15px;
+    color: #888;
+    font-size: 12px;
+    font-weight: 400;
+}

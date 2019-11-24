@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Select from 'react-select'
 import "./MainTitle.css";
 import {Link} from "react-router-dom";
@@ -13,14 +13,14 @@ class MainTitle extends React.Component {
         {link: "#/women/2", name: "T-SHIRTS/SHIRTS/SWEATER"},
         {link: "#/women/3", name: "DRESS/SKIRT"},
         {link: "#/women/4", name: "PANTS/SHORTS"},
-        {link: "#/women/5", name: "DENIM"},
+        {link: "#/denim/women-1", name: "DENIM"},
         {link: "#/women/6", name: "ACC"}
       ],
       men: [
         {link: "#/men/1", name: "COATS/JACKETS"},
         {link: "#/men/2", name: "T-SHIRTS/SHIRTS/SWEATER"},
         {link: "#/men/3", name: "PANTS/SHORTS"},
-        {link: "#/men/4", name: "DENIM"},
+        {link: "#/denim/men-1", name: "DENIM"},
         {link: "#/men/5", name: "ACC"}
       ],
       denim: {
@@ -84,7 +84,7 @@ class MainTitle extends React.Component {
         };
       } else {
         cssScroll.header = {backgroundColor: "rgba(0,0,0,0)", position: "absolute"};
-        cssScroll.headerNavWrap = {color: "#f9f9f9"};
+        cssScroll.headerNavWrap = {color: "#f9f9f9", textShadow:"0 0 6px rgba(4,0,0,.3)"};
         cssScroll.header.textShadow = "rgb(229, 229, 229) 0px -2px 10px 0px";
       }
     } else {
@@ -107,17 +107,17 @@ class MainTitle extends React.Component {
           </a>
           <div className="header-nav-contents">
             <ul className="header-nav-Wrap" style={cssScroll.headerNavWrap}>
-              <HeaderNav name="WOMEN" link="#/women/all" subMenus={subMenus.women}/>
-              <HeaderNav name="MEN" link="#/men/all" subMenus={subMenus.men}/>
-              <HeaderNav2 name="DENIM" link="#/denim/all" menus={subMenus.denim}/>
-              <HeaderNav name="BAG" link="#/bag/all" subMenus={subMenus.bag}/>
-              <HeaderNav name="SALE" link="#/sale/all" subMenus={subMenus.sale}/>
-              <HeaderNav name="EVENT" link="#/event/all" subMenus={subMenus.event}/>
+              <HeaderNav name="WOMEN" link="#/women/all" subMenus={subMenus.women} wrapColor={cssScroll.headerNavWrap}/>
+              <HeaderNav name="MEN" link="#/men/all" subMenus={subMenus.men}  wrapColor={cssScroll.headerNavWrap}/>
+              <HeaderNav2 name="DENIM" link="#/denim/all" menus={subMenus.denim}  wrapColor={cssScroll.headerNavWrap}/>
+              <HeaderNav name="BAG" link="#/bag/all" subMenus={subMenus.bag}  wrapColor={cssScroll.headerNavWrap}/>
+              {/*<HeaderNav name="SALE" link="#/sale/all" subMenus={subMenus.sale}/>*/}
+              {/*<HeaderNav name="EVENT" link="#/event/all" subMenus={subMenus.event}/>*/}
             </ul>
 
             <ul className="header-nav-icons-wrap" style={cssScroll.headerNavWrap}>
-              <li><i className="fas fa-search"></i></li>
-              <li><a href="#/user"><i className="fas fa-user"></i></a></li>
+              {/*<li><i className="fas fa-search"></i></li>*/}
+
             </ul>
           </div>
         </div>

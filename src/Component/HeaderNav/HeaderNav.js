@@ -1,13 +1,13 @@
-import React from "react";
+﻿import React from "react";
 import eventService from "../../services/EventService";
 
 const emitSelectSubMenuEvent = (e) => {
   eventService.emitEvent('onTriangleMenuChange', Number(e.target.dataset.id));
 };
 
-export const HeaderNav = ({name, link, subMenus}) => (
+export const HeaderNav = ({name, link, subMenus, wrapColor}) => (
   <li className="header-nav">
-    <a href={link}>{name}</a>
+    <a href={link} style={wrapColor}>{name}</a>
     <div className="headerSubMenu">
       <ul>
         {subMenus.map((v, i) => (<li key={i}><a href={v.link}>{v.name}</a></li>))}
@@ -16,9 +16,9 @@ export const HeaderNav = ({name, link, subMenus}) => (
   </li>
 );
 
-export const HeaderNav2 = ({name, link, menus}) => (
+export const HeaderNav2 = ({name, link, menus, wrapColor}) => (
   <li className="header-nav">
-    <a href={link}>{name}</a>
+    <a href={link} style={wrapColor}>{name}</a>
     <div className="headerSubMenu" style={{width: "400px"}}>
       <div className="row">
         {
@@ -37,7 +37,7 @@ export const HeaderNav2 = ({name, link, menus}) => (
 );
 
 export const TriangleMenuHeaderNav = ({name, link, subMenus}) => (
-  <div className="headerSubMenu" style={{marginTop: "10px"}}>
+  <div className="headerSubMenu" style={{ marginTop: "10px"}}>
     <ul>
       {subMenus.map((v, i) => (
         <li key={i}>

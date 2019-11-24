@@ -3,79 +3,26 @@ import "./ShopContents.css";
 import SPTitle from "../SPTitle/SPTitle";
 import ClothesCard2 from "../../ClothesCard2/ClothesCard2";
 import {MySelect} from "../../MySelect/MySelect";
-import MainFooter from "../../../MainFooter/MainFooter";
 import ClothesCard3 from "../../ClothesCard3/ClothesCard3";
 
 class ShopContents extends React.Component {
 
   state = {
-    sliderDatas: [
-      {
-        image: "http://image.guesskorea.com/images/MJ/MJ4K7481/MJ4K7481_M.jpg",
-        hoverImage: "http://image.guesskorea.com/images/MJ/MJ4K7481/MJ4K7481_O.jpg",
-        title: "남녀공용 뽀글이 스텐집업",
-        salePrice: 133200,
-        firstPrice: 148000,
-        heartCnt: 3,
-        colorPick: [
-          {title: "퍼플", color: "#5305ab"},
-          {title: "아이보리", color: "#fdfbdc"}
-        ]
-      },
-      {
-        image: "http://image.guesskorea.com/images/YJ/YJ3D3122/YJ3D3122_M.jpg",
-        hoverImage: "https://guess.ajashop.co.kr/SE2/upload/1569982826-29.jpg",
-        title: "여성 블랙 밴딩 슬림 붓컷",
-        salePrice: 124200,
-        firstPrice: 138000,
-        heartCnt: 3,
-        colorPick: [
-          {title: "퍼플", color: "#5305ab"},
-          {title: "아이보리", color: "#fdfbdc"}
-        ]
-      },
-      {
-        image: "http://image.guesskorea.com/images/MJ/MJ3K9466/MJ3K9466_M.jpg",
-        hoverImage: "http://image.guesskorea.com/images/MJ/MJ3K9466/MJ3K9466_O.jpg",
-        title: "남녀공용 기획 등판 GUESS 루즈핏 맨투맨",
-        salePrice: 52200,
-        firstPrice: 58000,
-        heartCnt: 3,
-        colorPick: [
-          {title: "퍼플", color: "#5305ab"},
-          {title: "아이보리", color: "#fdfbdc"}
-        ]
-      },
-      {
-        image: "http://image.guesskorea.com/images/YJ/YJ3D6195/YJ3D6195_M.jpg",
-        hoverImage: "http://image.guesskorea.com/images/YJ/YJ3D6195/YJ3D6195_O.jpg",
-        title: "(셀럽착장)여성 인디고 하프 로고 밴딩 와이드",
-        salePrice: 151200,
-        firstPrice: 168000,
-        heartCnt: 3,
-        colorPick: [
-          {title: "퍼플", color: "#5305ab"},
-          {title: "아이보리", color: "#fdfbdc"}
-        ]
-      },
-      {
-        image: "http://image.guesskorea.com/images/YJ/YJ3D1125/YJ3D1125_M.jpg",
-        hoverImage: "https://guess.ajashop.co.kr/SE2/upload/1567995850-40.jpg",
-        title: "여성 D톤 맘핏",
-        salePrice: 124200,
-        firstPrice: 138000,
-        heartCnt: 3,
-        colorPick: [
-          {title: "퍼플", color: "#5305ab"},
-          {title: "아이보리", color: "#fdfbdc"}
-        ]
-      }
-    ]
-  }
+    lastItems: 20
+  };
 
   onSelect = (sel) => {
     console.log(sel);
   };
+
+  componentDidMount() {
+    window.addEventListener('scroll',  (e) => {
+      const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
+      if ((scrollTop + clientHeight) >= scrollHeight) {
+        this.setState({lastItems: this.state.lastItems + 10});
+      }
+    });
+  }
 
   render() {
     const {shopInfo} = this.props;
@@ -118,10 +65,10 @@ class ShopContents extends React.Component {
         <div className="inner_align" style={{width: "1250px"}}>
           {
             // 데이터 정보다 shopInfo에 전달한 정보로 교체
-            this.props.normalItems.map((v, i) => (<ClothesCard3 key={i} cloths={v} />))
+            this.props.normalItems.map((v, i) =>
+              ((this.state.lastItems) > i ? <ClothesCard3 key={i} cloths={v}/> : null))
           }
         </div>
-        <MainFooter/>
       </div>
     );
   }

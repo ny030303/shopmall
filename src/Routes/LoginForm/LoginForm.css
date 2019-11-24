@@ -1,7 +1,49 @@
+.loginForm {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+
 .div-form-login {
   width: 400px;
   left: 50%;
   position: absolute;
   top: 200px;
   transform: translateX(-50%);
+}
+
+.loginWelcomeTitle {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  margin-top: 70px;
+}
+
+.loginBackImg {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/img/loginBack.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backDark {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.9);
+  position: absolute;
+  top: 0;
+}
+
+.signInputWrap {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.loginJumbotron {
+  color: rgb(170, 170, 170);
+  font-size: 12px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
 }

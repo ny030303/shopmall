@@ -37,6 +37,10 @@ a {
   color: #666;
 }
 
+a:hover {
+    color: #666;
+}
+
 .mainNewArrivalsStyle {
   text-align: center;
   font-family: 'Abel', sans-serif;
@@ -67,4 +71,105 @@ a {
   margin: 0 auto;
   display: block;
   width: 1200px;
+  position: relative;
+}
+
+.big-color-circle {
+  width: 30px;
+  height: 30px;
+  margin: 0 3px;
+  background-color: purple !important;
+}
+
+.cursor-hand {
+  cursor: pointer;
+}
+
+/*=========btn========*/
+
+.blackBtnStyle {
+  background-color: #000;
+  color: #fff;
+  border-radius: 0;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  height: 53px;
+  transition: .3s;
+  border: none;
+}
+
+.blackBtnStyle:hover {
+  color: #fff;
+  /*transform: rotate(45deg);*/
+  background-color: #e50b1f;
+}
+
+.whiteBtnStyle {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  height: 53px;
+  transition: .3s;
+}
+
+.whiteBtnStyle:hover {
+  border: 1px solid #e50b1f;
+  color: #e50b1f;
+}
+
+.smallBlackBtn {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  height: 28px;
+  font-size: 13px;
+  padding: 3px 11px;
+  margin: 2px 0;
+  width: 76px;
+  border: none;
+}
+
+.smallWhiteBtn {
+  border-radius: 0;
+  height: 28px;
+  font-size: 13px;
+  padding: 3px 11px;
+  margin: 2px 0;
+  width: 76px;
+  background: #fff;
+  border: 1px solid #d3d3d3;
+}
+
+.smallGrayBtn {
+  background-color: #969696;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  height: 28px;
+  font-size: 13px;
+  padding: 3px 11px;
+  margin: 2px 0;
+  width: 76px;
+  border: none;
+}
+
+/*===========table===========*/
+
+.orderSheetTable {
+  border-top: 2px solid #111;
+  text-align: center;
+}
+
+/*=======jumbotron===============*/
+
+.subJumboStyle {
+  color: rgb(105, 105, 105);
+  font-size: 12px;
+  padding: 30px;
 }

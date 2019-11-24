@@ -1,12 +1,26 @@
 import React from "react";
 import {withRouter} from 'react-router-dom';
 import "./ClothesCard3.css";
+import {getLoginInfo, setHeartUser} from "../../services/DataService";
+import alertDialog from "../../services/AlertDialog";
 
 class ClothesCard3 extends React.Component {
   gotoDetailClothes = () => {
-    let data = this.props.location.pathname.split('/')[1];
-    data += '-' + this.props.cloths.dataId;
-    this.props.history.push("/detailClothes/" + data);
+    console.log(this.props.cloths);
+    this.props.history.push("/detailClothes/" + this.props.cloths.pid);
+  };
+
+  countUpHeart = (e, cloths) => {
+    e.stopPropagation();
+    let user = getLoginInfo();
+    console.log(user);
+    if (!user) {
+      alertDialog.show('알림', '로그인 후 이용가능합니다..');
+      return;
+    }
+    setHeartUser({check: true, uid: user.id, pid: cloths.pid}, res => {
+      console.log(res);
+    });
   };
 
   render() {
@@ -15,7 +29,7 @@ class ClothesCard3 extends React.Component {
       <div className="clothesCard3" onClick={this.gotoDetailClothes}>
         <div className="clothesCard3ImageWrap">
           <div className="clothesCard3Image" style={{backgroundImage: "url(" + cloths.image + ")"}}/>
-          <div className="size-box">
+          <div className="size-box" onClick={(e) => this.countUpHeart(e, cloths)}>
             <i className="far fa-heart"/>
             <div className="clotCard2HeartText">{cloths.heartCnt}</div>
           </div>

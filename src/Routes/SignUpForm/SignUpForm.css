@@ -1,0 +1,15 @@
+.textareaStyle {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #aaa;
+    overflow-y: scroll;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+.signUpJumbotron {
+    color: rgb(105, 105, 105);
+    font-size: 12px;
+    padding: 30px;
+    background-color: #f1f1f1;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import "./OtherShopPage.css";
 import ClothesCard2 from "../ClothesCard2/ClothesCard2";
 import {MySelect} from "../MySelect/MySelect";
@@ -7,13 +7,22 @@ import MainFooter from "../../MainFooter/MainFooter";
 import TriangleMenu from "../TriangleMenu/TriangleMenu";
 
 class OtherShopPage extends React.Component {
-
   state = {
+    lastItems: 20
   };
 
   onSelect = (sel) => {
     console.log(sel);
   };
+
+  componentDidMount() {
+    window.addEventListener('scroll',  (e) => {
+      const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
+      if ((scrollTop + clientHeight) >= scrollHeight) {
+        this.setState({lastItems: this.state.lastItems + 10});
+      }
+    });
+  }
 
   onMenuClick = (e) => {
     this.props.onChange(Number(e.target.dataset.idx));
@@ -66,11 +75,9 @@ class OtherShopPage extends React.Component {
         <div className="inner_align" style={{width: "1250px"}}>
           {
             // 데이터 정보다 shopInfo에 전달한 정보로 교체
-            this.props.items.map((v, i) => (<ClothesCard3 key={i} cloths={v} />))
+            this.props.items.map((v, i) => ((this.state.lastItems) > i ? <ClothesCard3 key={i} cloths={v}/> : null))
           }
         </div>
-
-        <MainFooter/>
       </div>
     );
   }

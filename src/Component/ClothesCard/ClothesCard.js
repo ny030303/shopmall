@@ -1,13 +1,18 @@
 import React from "react";
+import {withRouter} from 'react-router-dom';
 import "./ClothesCard.css";
-import {MyButton} from "../../Component/MyButton/MyButton";
+
 
 class ClothesCard extends React.Component {
+    gotoDetailClothes = () => {
+        console.log(this.props.cloths);
+        this.props.history.push("/detailClothes/" + this.props.cloths.pid);
+    };
     render() {
         const {cloths} = this.props;
         // console.log(cloths);
         return (
-            <div className="clothesCard1">
+            <div className="clothesCard1" onClick={this.gotoDetailClothes}>
                 <div className="image">
                     <div className="clothesCard1Image">
                         <img src={cloths.image} style={{height: "100%"}}/>
@@ -22,7 +27,7 @@ class ClothesCard extends React.Component {
                     <div className="title">{cloths.title}</div>
                     <div className="price clear">
                         <div className="pull-left"><strong>{cloths.salePrice.toLocaleString()}</strong>
-                            <del>{cloths.firstPrice.toLocaleString()}</del>
+                            &nbsp;&nbsp;<del>{cloths.firstPrice.toLocaleString()}</del>
                         </div>
                     </div>
                     <div className="icons">
@@ -34,4 +39,4 @@ class ClothesCard extends React.Component {
     }
 }
 
-export default ClothesCard;
+export default withRouter(ClothesCard);

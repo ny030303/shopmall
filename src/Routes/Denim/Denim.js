@@ -1,6 +1,5 @@
 import React from "react";
 import OtherShopPage from "../../Component/OtherShopPage/OtherShopPage";
-import MainFooter from "../../MainFooter/MainFooter";
 import eventService from "../../services/EventService";
 import {DBItemDataToItems, getDenimItems} from "../../services/DataService";
 
@@ -27,18 +26,17 @@ export class Denim extends React.Component {
   };
 
   componentDidMount() {
-    const {current, shopInfo} = this.state;
+    // const {current, shopInfo} = this.props;
+    console.log(this.props.match);
     eventService.listenEvent('onTriangleMenuChange', idx => this.onChange(null, idx));
     this.onChange(0, 0);
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if( prevProps.match.params.subMenu != this.props.match.params.subMenu ) {
+    if (prevProps.match.params.subMenu != this.props.match.params.subMenu) {
       console.log(prevProps.match.params, this.props.match.params);
       let selectedMenu = this.props.match.params.subMenu.split('-');
-      // if (newMenuIdx != this.state.current.menuIdx) {
-        this.onChange(Number(selectedMenu[1])-1, selectedMenu[0] == 'women' ? 0 : 1);
-//      }
+      this.onChange(Number(selectedMenu[1]) - 1, selectedMenu[0] == 'women' ? 0 : 1);
     }
   }
 
@@ -54,7 +52,7 @@ export class Denim extends React.Component {
     }
     if (menuIdx !== null) {
       current.menuIdx = menuIdx;
-      getDenimItems(shopInfo.subMenu[Number(current.subMenuIdx)].name.toLowerCase(), current.menuIdx+1, res => {
+      getDenimItems(shopInfo.subMenu[Number(current.subMenuIdx)].name.toLowerCase(), current.menuIdx + 1, res => {
         let denimItems = [];
         res.data.forEach(item => denimItems.push(DBItemDataToItems(item)));
         this.setState({denimItems: denimItems});

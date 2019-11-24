@@ -16,10 +16,8 @@ class MainVideoBox extends React.Component {
     render() {
         return (
             <div className="mainVideoBox">
-                <div className="mainVideoImg"></div>
-                <div>
-                    <div className="mainVideoTextImg"/>
-                </div>
+                <div className="mainVideoImg"/>
+
             </div>
         );
     }

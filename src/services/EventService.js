@@ -1,3 +1,10 @@
+export const setObserverVisibility = (element, callback) => {
+  let intersectionObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => callback(entry.intersectionRatio > 0));
+  });
+  intersectionObserver.observe(element);
+};
+
 const getCallerClassName= () => {
   let callerClass = (new Error()).stack.split("\n")[3].trim().split(" ")[1];
   return callerClass.indexOf('.') > 0 ? callerClass.substr(0, callerClass.indexOf('.')) : callerClass;

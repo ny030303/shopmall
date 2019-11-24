@@ -1,0 +1,9 @@
+#DetailClothesNav {
+    position: sticky;
+    top: 90px;
+    z-index: 5;
+}
+
+.detailClothesInfoimg {
+    text-align: center;
+}

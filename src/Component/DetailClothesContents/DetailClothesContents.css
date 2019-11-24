@@ -3,3 +3,73 @@
 .marginTop90px {
     margin-top: 90px;
 }
+
+.viewSlideClothesWrap {
+    width: 550px;
+    display: inline-block;
+}
+
+.clothesInfoList {
+    width: 40%;
+    position: absolute;
+    top: 150px;
+    right: 50px;
+}
+
+.clothesInfoTitle {
+    margin-top: 5px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.clothesInfoPrice {
+    margin-top: 3px;
+    font-size: 13px;
+    color: #888;
+}
+
+.clothesInfoPrice strong {
+    font-size: 25px;
+    color: #111;
+    font-weight: 700;
+}
+
+.box-summary {
+    margin-top: 20px;
+    padding: 16px 0;
+    border: 1px solid #000;
+    border-width: 1px 0;
+}
+
+.clothesInfoColorCircleWrap {
+    display: flex;
+    margin-top: 15px;
+}
+
+.clothesInfoMiddleList li {
+    position: relative;
+}
+
+.clothesInfoMiddleList li div {
+
+}
+
+#clothesInfoColorTitle {
+    flex: 1;
+}
+
+.sizeNavActive {
+    background-color: #f7374a !important;
+    color: #fff !important;
+}
+
+
+/*===========Nav============*/
+
+#DetailClothesNav {
+    position: sticky;
+    top: 90px;
+    z-index: 5;
+    background-color: #fff;
+}
