@@ -3,7 +3,6 @@ import OtherShopPage from "../../Component/OtherShopPage/OtherShopPage";
 import eventService from "../../services/EventService";
 import {DBItemDataToItems, getDenimItems} from "../../services/DataService";
 
-
 export class Denim extends React.Component {
   state = {
     shopInfo: {

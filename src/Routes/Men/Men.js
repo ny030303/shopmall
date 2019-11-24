@@ -1,13 +1,12 @@
 import React from "react";
 import ShopContents from "../../Component/ShopPage/ShopContents/ShopContents";
-import MainFooter from "../../MainFooter/MainFooter";
 import {DBItemDataToItems, getBestItems, getNormalItems} from "../../services/DataService";
 
 export class Men extends React.Component {
   state = {
     shopInfo: {
       name: "MEN",
-      background:"/img/SPTitle2.jpg",
+      background: "/img/SPTitle2.jpg",
     },
     bestItems: [],
     normalItems: []
@@ -18,7 +17,7 @@ export class Men extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if( prevProps.match.params.subMenu != this.props.match.params.subMenu ) {
+    if (prevProps.match.params.subMenu != this.props.match.params.subMenu) {
       this.updateItems(this.props.match.params);
     }
   }

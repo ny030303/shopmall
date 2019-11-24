@@ -9,8 +9,6 @@ import {Women} from "./Routes/Women/Women";
 import {Men} from "./Routes/Men/Men";
 import {Denim} from "./Routes/Denim/Denim";
 import {Bag} from "./Routes/Bag/Bag";
-import {Sale} from "./Routes/Sale/Sale";
-import {EventContents} from "./Routes/EventContents/EventContents";
 import MainFooter from "./MainFooter/MainFooter";
 import DetailClothesContents from "./Component/DetailClothesContents/DetailClothesContents";
 import OrderSheetPage from "./Component/OrderSheetPage/OrderSheetPage";

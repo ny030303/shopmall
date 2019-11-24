@@ -1,7 +1,6 @@
 import React from "react";
 import ShopContents from "../../Component/ShopPage/ShopContents/ShopContents";
-import {DBItemDataToItems,  getBestItems, getNormalItems} from "../../services/DataService";
-import MainFooter from "../../MainFooter/MainFooter";
+import {DBItemDataToItems, getBestItems, getNormalItems} from "../../services/DataService";
 
 export class Women extends React.Component {
   state = {
@@ -18,7 +17,7 @@ export class Women extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if( prevProps.match.params.subMenu != this.props.match.params.subMenu ) {
+    if (prevProps.match.params.subMenu != this.props.match.params.subMenu) {
       this.updateItems(this.props.match.params);
     }
   }

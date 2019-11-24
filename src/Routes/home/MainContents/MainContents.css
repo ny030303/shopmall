@@ -1,11 +1,7 @@
 .mainScreen {
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
-    /*background-image: url("img/Background.png");*/
     width: 100vw;
     height: 100vh;
     display: inline-block;
-    /*overflow-x: hidden;*/
 }
 
 .mainWrap {

@@ -1,3 +1,4 @@
+
 export const setObserverVisibility = (element, callback) => {
   let intersectionObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => callback(entry.intersectionRatio > 0));

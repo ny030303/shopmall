@@ -1,6 +1,5 @@
 import React from "react";
 import OtherShopPage from "../../Component/OtherShopPage/OtherShopPage";
-import MainFooter from "../../MainFooter/MainFooter";
 import eventService from "../../services/EventService";
 import {DBItemDataToItems, getBagItems} from "../../services/DataService";
 
