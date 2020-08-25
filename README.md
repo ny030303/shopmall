@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project - Shop Mall
 
-## Available Scripts
+------------
 
-In the project directory, you can run:
+## 프로젝트 계획 설명
+> 이 프로젝트는 쇼핑몰을 제작해보며 쇼핑몰 기능을 이해하고 공부하겠다는 학습 목적으로 프로젝트를 진행했습니다. 이 프로젝트는 Guess 홈페이지를 보고 만든 작품입니다. React, php 등을 사용해 만든 첫 프로젝트 입니다. 결제 기능과 쇼핑물품 무한 스크롤 기능 등 쇼핑몰에 들어갈 주요 기능을 위주로 제작된 프로그램입니다.
 
-### `npm start`
+## shopmall 실행 설명
+* 실행 파일 이름: shopmall
+``` C
+  $
+```
+  
+## shopmall 기능 설명
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### [홈 화면 기능]
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. 매인 슬라이드 기능
+    + 이벤트, 의류관련 사진을 슬라이드 하는 기능
+2. new 의류 슬라이드 기능
+    + 자동 슬라이드 기능
+    + 클릭 시 해당 의류 판매 페이지 이동 기능
+  
+### [해더 기능]
 
-### `npm test`
+ 1. WOMEN, MEN, DENIM, BAG 메뉴 선택 기능
+ 
+### [오른쪽 해더 기능]
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. 내 쇼핑백 조회기능
+2. 마이메뉴 기능
 
-### `npm run build`
+### [로그인, 회원가입 기능]
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. 회원 로그인 폼 기능
+2. 회원가입 폼 기능
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### [의류 판매 페이지 기능]
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. 제품 정보 조회 기능
+2. 의류 이미지 뷰어 기능
+3. 상품 상세정보 기능
+4. 배송/교환/반품 설명 조회 기능
+5. 사이즈, 컬러, 갯수 등 폼 기능
+6. 쇼핑백으로 가기, 바로 사기 기능
 
-### `npm run eject`
+### [결제 페이지 기능]
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. 결제할 목록 조회 기능
+2. 최종 결제 기능
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### [마이메뉴 기능]
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. 내 정보 조회, 수정 기능
+2. 로그아웃 기능
+3. 탈퇴 기능
+4. 구매 목록 조회 기능
+5. 쇼핑백 목록 조회 기능
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### 차차 작성 예정
